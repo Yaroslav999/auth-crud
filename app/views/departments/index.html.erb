@@ -1,0 +1,21 @@
+<%= link_to 'Create new', new_department_path %>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">id</th>
+    <th scope="col">Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @departments.each do |department| %>
+    <tr>
+      <th scope="row"><%= department.id %></th>
+      <th scope="row"><%= department.name %></th>
+      <th scope="row">
+        <%= link_to 'Edit', edit_department_path(department) %> |
+        <%= link_to 'Delete', department_path(department), method: :delete %>
+      </th>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

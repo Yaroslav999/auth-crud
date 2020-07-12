@@ -1,0 +1,26 @@
+<%= link_to 'Create new', new_employee_path %>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Active</th>
+    <th scope="col">Department</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <th scope="row"><%= employee.id %></th>
+        <th scope="row"><%= employee.name %></th>
+        <th scope="row"><%= employee.active %></th>
+        <th scope="row"><%= employee.department.name %></th>
+        <th scope="row">
+          <%= link_to 'Edit', edit_employee_path(employee) %> |
+          <%= link_to 'Delete', employee_path(employee), method: :delete %>
+        </th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

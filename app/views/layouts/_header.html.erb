@@ -1,0 +1,7 @@
+<nav class="navbar navbar-light bg-light">
+  <%= link_to 'Employees', employees_path %>
+  <%= link_to 'Departments', departments_path %>
+  <form class="form-inline">
+    <%= link_to 'Log out', destroy_user_session_path %>
+  </form>
+</nav>
