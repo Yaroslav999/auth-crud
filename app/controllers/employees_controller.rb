@@ -2,10 +2,10 @@
 
 class EmployeesController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_employee, only: %i[show edit update delete]
+  before_action :find_employee, only: %i[show edit update destroy]
 
   def index
-    @employees = Employee.all
+    @employees = Employee.all.page params[:page]
   end
 
   def new

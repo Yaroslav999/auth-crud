@@ -2,10 +2,10 @@
 
 class DepartmentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_department, only: %i[show edit update delete]
+  before_action :find_department, only: %i[show edit update destroy]
 
   def index
-    @departments = Department.all
+    @departments = Department.all.page params[:page]
   end
 
   def new
