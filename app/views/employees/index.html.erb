@@ -1,4 +1,10 @@
 <%= link_to 'Create new', new_employee_path %>
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_cont, 'Name start with' %>
+  <%= f.search_field :name_cont %>
+  <%= f.submit %>
+<% end %>
+
 <table class="table">
   <thead>
   <tr>
