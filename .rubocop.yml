@@ -8,6 +8,7 @@ AllCops:
     - 'spec/**/*'
     - 'bin/**/*'
     - 'db/**/*'
+    - 'node_modules/**/*'
 
 Metrics/LineLength:
   Max: 120
