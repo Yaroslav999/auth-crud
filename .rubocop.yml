@@ -1,0 +1,19 @@
+# Common configuration.
+
+AllCops:
+  Include:
+    - '**/*.rb'
+  Exclude:
+    - 'config/**/*'
+    - 'spec/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/Documentation:
+  Enabled: false
