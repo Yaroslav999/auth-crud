@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Department, type: :model do
   subject { described_class }
 
   it "is valid with not valid attributes" do
@@ -8,6 +8,6 @@ RSpec.describe User, type: :model do
   end
 
   it "is valid with valid attributes" do
-    expect(subject.new(email: 'test@mail.test', password: '1234qwer')).to be_valid
+    expect(subject.new(name: 'Test department')).to be_valid
   end
 end
